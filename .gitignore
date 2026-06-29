@@ -1,0 +1,9 @@
+.gemini/
+.claude/
+temp-git/
+mingit.zip
+temp_zip_build/
+*.zip
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Chandru M | AI Art, Videos & Creative Visuals</title>
+  <meta name="description" content="Creative gallery by Chandru M — AI-generated artwork, posters, packaging, backdrop videos and promotional visuals. Filterable masonry grid." />
+  <meta name="theme-color" content="#050505" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050505'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='54' font-weight='bold' fill='%23e50914' text-anchor='middle'%3ECM%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div id="loader"><div class="loader-logo">CHANDRU<span>.</span>M</div><div class="loader-bar"><i></i></div><div class="loader-pct">000 %</div></div>
+  <div class="cursor-dot"></div><div class="cursor-ring"></div><div class="scroll-progress"></div>
+  <div class="fx-spotlight"></div><div class="fx-noise"></div>
+  <div class="fx-gradient"><span></span><span></span><span></span></div>
+  <canvas id="particles"></canvas>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" data-magnetic><span class="mark">CM</span><span><small>Movie / Creative Studio</small><b>Chandru M</b></span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a>
+        <a href="logos.html">Logos</a><a href="gallery.html">Gallery</a><a href="experience.html">Experience</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm" data-magnetic>Let's Work</a>
+        <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></div>
+      <span class="eyebrow">Visual Showcase</span>
+      <h1>Creative <span class="text-grad">Gallery</span></h1>
+      <p>AI artwork, posters, packaging and backdrop visuals. Filter by category — every tile is a placeholder, ready for your final assets in <code>/assets/gallery</code>.</p>
+    </section>
+
+    <!-- Videos -->
+    <section class="section container">
+      <div class="section-head">
+        <span class="eyebrow" data-reveal>Motion</span>
+        <h2 data-reveal data-delay="1">Featured <span class="text-grad">Videos</span></h2>
+        <p data-reveal data-delay="2">Stage performances, backdrop visuals & short-form content. Replace with embeds or MP4s in <code>/assets/videos</code>.</p>
+      </div>
+      <div class="grid cards-1">
+        <div class="video-card" id="led-backdrop" data-reveal data-video-src="assets/videos/LED BACKDROP VISUAL.mp4" data-video-title="LED Backdrop Visual">
+          <video class="card-video" src="assets/videos/LED BACKDROP VISUAL.mp4" autoplay loop muted playsinline></video>
+          <div class="play-btn"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+          <div class="v-meta"><b>LED Backdrop Visual</b><span>Live Event · Motion</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filterable masonry -->
+    <section class="section container">
+      <div class="section-head center">
+        <span class="eyebrow center" data-reveal>Stills & Artwork</span>
+        <h2 data-reveal data-delay="1">Visual <span class="text-grad">Showcase</span></h2>
+      </div>
+
+      <div class="filter-bar" data-reveal>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI Art</button>
+        <button class="filter-btn" data-filter="poster">Posters</button>
+        <button class="filter-btn" data-filter="brand">Branding</button>
+      </div>
+
+      <div class="masonry">
+        <div class="m-item" data-cat="ai" data-reveal data-lightbox="AI Artwork — OG 5 Concept">
+          <img src="assets/logos/OG 5.png" alt="OG 5 AI Artwork">
+          <div class="overlay"><span>AI Art</span><b>OG 5 Concept</b></div>
+        </div>
+        <div class="m-item" data-cat="poster" data-hide-on-all="true" style="display: none;" data-reveal data-delay="1" data-lightbox="Promotional Poster — OG 5">
+          <img src="assets/logos/OG 5.png" alt="OG 5 Poster">
+          <div class="overlay"><span>Poster</span><b>OG 5 Promo</b></div>
+        </div>
+        <div class="m-item" data-cat="brand" data-reveal data-delay="2" data-lightbox="Branding — Keith Marbo">
+          <img src="assets/logos/keith Marbo logo.png" alt="Keith Marbo Branding">
+          <div class="overlay"><span>Branding</span><b>Keith Marbo</b></div>
+        </div>
+        <div class="m-item" data-cat="brand" data-hide-on-all="true" style="display: none;" data-reveal data-lightbox="Branding — OG 5">
+          <img src="assets/logos/OG 5.png" alt="OG 5 Logo">
+          <div class="overlay"><span>Branding</span><b>OG 5 Mark</b></div>
+        </div>
+        <div class="m-item" data-cat="brand" data-reveal data-lightbox="Branding — Boopathi Spices">
+          <img src="assets/gallery/Boopathi Packaging.jpg" alt="Boopathi Spices Branding">
+          <div class="overlay"><span>Branding</span><b>Boopathi Spices</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section container">
+      <div class="cta-band" data-reveal>
+        <span class="eyebrow center">Like what you see?</span>
+        <h2>Let's make <span class="text-grad">visuals</span> that pop.</h2>
+        <p>AI art, posters, packaging and motion — crafted to grab attention.</p>
+        <div class="cta-actions"><a href="contact.html" class="btn btn-primary" data-magnetic>Commission Work</a><a href="projects.html" class="btn btn-ghost" data-magnetic>See Projects</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="brand"><span class="mark">CM</span><span><small>Movie / Creative Studio</small><b>Chandru M</b></span></a>
+          <p>Creative content creator, video editor & AI designer based in Bangalore, India. Storytelling through visuals.</p></div>
+        <div class="footer-col"><h4>Explore</h4><a href="about.html">About</a><a href="projects.html">Projects</a><a href="logos.html">Logos</a><a href="gallery.html">Gallery</a></div>
+        <div class="footer-col"><h4>More</h4><a href="experience.html">Experience</a><a href="contact.html">Contact</a><a href="assets/resume/Chandru-M-Resume.pdf" download>Resume</a></div>
+        <div class="footer-col"><h4>Get in touch</h4><a href="mailto:chandrumurugadass03052004@gmail.com">chandrumurugadass03052004@gmail.com</a><a href="https://www.linkedin.com/in/chandru-m-a85b4824b" target="_blank" rel="noopener">linkedin.com/in/chandru-m-a85b4824b</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> Chandru M. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/_charming_chan_/?hl=en" target="_blank" rel="noopener" class="social-ico" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.linkedin.com/in/chandru-m-a85b4824b" target="_blank" rel="noopener" class="social-ico" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.76-2.05 4.02 0 4.76 2.65 4.76 6.1V23h-4v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V23h-4V8z"/></svg></a>
+          <a href="contact.html" class="social-ico" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5m-7 7l7-7 7 7"/></svg></button>
+  <script src="js/script.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>

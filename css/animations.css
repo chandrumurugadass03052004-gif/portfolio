@@ -1,0 +1,132 @@
+/* =====================================================================
+   CHANDRU M — Premium Portfolio
+   animations.css — Keyframes & motion utilities
+   ===================================================================== */
+
+/* ---------- Page load ---------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Hero line reveal */
+@keyframes lineReveal {
+  from { transform: translateY(110%); }
+  to   { transform: translateY(0); }
+}
+
+.hero h1 .line span { display: inline-block; animation: lineReveal 0.9s var(--ease) both; }
+.page-loaded .hero .eyebrow { animation: fadeUp 0.7s var(--ease) both; }
+.page-loaded .hero h1 .line:nth-child(1) span { animation-delay: 0.15s; }
+.page-loaded .hero h1 .line:nth-child(2) span { animation-delay: 0.28s; }
+.page-loaded .hero .roles { animation: fadeUp 0.7s var(--ease) 0.5s both; }
+.page-loaded .hero .lede { animation: fadeUp 0.7s var(--ease) 0.6s both; }
+.page-loaded .hero-actions { animation: fadeUp 0.7s var(--ease) 0.72s both; }
+.page-loaded .hero .socials { animation: fadeUp 0.7s var(--ease) 0.84s both; }
+.page-loaded .hero-visual { animation: scaleIn 1s var(--ease) 0.4s both; }
+
+/* Inner page hero load */
+.page-loaded .page-hero .eyebrow { animation: fadeUp 0.6s var(--ease) 0.1s both; }
+.page-loaded .page-hero h1 { animation: fadeUp 0.7s var(--ease) 0.2s both; }
+.page-loaded .page-hero > .container > p { animation: fadeUp 0.7s var(--ease) 0.32s both; }
+
+/* ---------- Continuous / ambient ---------- */
+@keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-26px) rotate(6deg); }
+}
+.floaty { animation: float 6s ease-in-out infinite; }
+.floaty-slow { animation: floatSlow 9s ease-in-out infinite; }
+
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--accent-glow); }
+  70% { box-shadow: 0 0 0 22px rgba(229,9,20,0); }
+  100% { box-shadow: 0 0 0 0 rgba(229,9,20,0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.9; }
+}
+.portrait-disc { animation: glowPulse 5s ease-in-out infinite; }
+
+@keyframes scrollDot {
+  0% { opacity: 1; top: 7px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes ripple {
+  to { transform: scale(3.2); opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Floating shapes for backgrounds */
+.shape { position: absolute; border-radius: 50%; pointer-events: none; opacity: 0.5; }
+.shape.ring { border: 1px solid var(--border-strong); background: transparent; }
+
+/* Gradient border animated */
+.grad-border {
+  position: relative;
+}
+.grad-border::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+  background: linear-gradient(120deg, var(--accent), transparent 40%, transparent 60%, var(--accent-2));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity var(--t-med);
+}
+.grad-border:hover::before { opacity: 1; }
+
+/* Counter ready */
+.counting { color: var(--text); }
+
+/* Text shimmer (loading skeleton) */
+.skeleton {
+  background: linear-gradient(90deg, #141414 25%, #1d1d1d 37%, #141414 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
