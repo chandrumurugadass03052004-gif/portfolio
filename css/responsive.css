@@ -47,6 +47,11 @@
   .contact-grid { grid-template-columns: 1fr; }
   .mvv-grid { grid-template-columns: 1fr; }
   .cards-3 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Center page/section headers on tablet/mobile */
+  .section-head, .page-hero { text-align: center; margin-left: auto; margin-right: auto; }
+  .section-head .eyebrow, .page-hero .eyebrow, .page-hero .breadcrumb { justify-content: center; }
+  .page-hero p { margin-left: auto; margin-right: auto; }
 }
 
 /* ---------- Mobile ---------- */
@@ -60,8 +65,6 @@
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .cert-card { flex-wrap: wrap; }
-  .cert-card .issuer { margin-left: 0; text-align: left; width: 100%; }
   .hero h1 { font-size: clamp(2.4rem, 13vw, 3.6rem); }
   .portrait-badge { display: none; }
   .btn { width: 100%; justify-content: center; }
@@ -69,6 +72,24 @@
   .cta-actions .btn, .hero-actions .btn { width: auto; }
   .meta-row { grid-template-columns: 1fr; }
   .to-top { right: 16px; bottom: 16px; }
+
+  /* Center card content on mobile */
+  .project-body { text-align: center; }
+  .project-body .tags { justify-content: center; }
+  .project-body .meta-row { text-align: center; }
+  .project-body .read-more { justify-content: center; width: 100%; }
+
+  .skill-card { text-align: center; }
+  .skill-card .ic { margin-left: auto; margin-right: auto; }
+  
+  .process-step { text-align: center; }
+  .process-step .n { position: relative; margin-bottom: 10px; top: 0; right: 0; display: block; text-align: center; }
+
+  .mvv { text-align: center; }
+  .mvv .ic { margin-left: auto; margin-right: auto; }
+
+  .cert-card { flex-direction: column; text-align: center; justify-content: center; }
+  .cert-card .issuer { text-align: center; width: 100%; margin-top: 10px; }
 }
 
 @media (max-width: 400px) {
