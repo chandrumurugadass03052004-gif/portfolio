@@ -119,7 +119,7 @@ p { color: var(--text-2); }
 
 /* ---------- 4. Layout ---------- */
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
-.section { padding: clamp(70px, 10vw, 140px) 0; position: relative; }
+.section { padding-top: clamp(70px, 10vw, 140px); padding-bottom: clamp(70px, 10vw, 140px); position: relative; }
 .section-head { max-width: 720px; margin-bottom: 56px; }
 .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 .section-head .eyebrow.center { justify-content: center; }
