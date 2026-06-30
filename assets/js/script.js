@@ -269,9 +269,18 @@
     }
   }
 
-  /* ---------- 15. Contact form (demo handler) ---------- */
+  /* ---------- 15. Contact form (success handler) ---------- */
   function initForm() {
-    // Form is now handled natively by formsubmit.co via HTML action attribute.
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+      const note = document.querySelector(".form-note");
+      if (note) {
+        note.classList.add("ok");
+        note.textContent = "✓ Thanks! Your message has been sent successfully. Chandru will get back to you soon.";
+      }
+      // Clean up the URL so it doesn't show the parameter on refresh
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
   }
 
   /* ---------- 16. Footer year ---------- */
