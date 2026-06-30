@@ -271,19 +271,7 @@
 
   /* ---------- 15. Contact form (demo handler) ---------- */
   function initForm() {
-    const form = $("#contact-form");
-    if (!form) return;
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const note = $(".form-note", form.parentNode) || $(".form-note");
-      const btn = $("button[type=submit]", form);
-      if (btn) { btn.disabled = true; btn.dataset.txt = btn.textContent; btn.textContent = "Sending…"; }
-      setTimeout(() => {
-        if (note) { note.classList.add("ok"); note.textContent = "✓ Thanks! Your message has been noted. Chandru will get back to you soon."; }
-        form.reset();
-        if (btn) { btn.disabled = false; btn.textContent = btn.dataset.txt || "Send Message"; }
-      }, 900);
-    });
+    // Form is now handled natively by formsubmit.co via HTML action attribute.
   }
 
   /* ---------- 16. Footer year ---------- */
